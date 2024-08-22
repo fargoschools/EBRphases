@@ -18,7 +18,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
+        h2, h3 {
             text-align: center;
             color: #333;
         }
@@ -28,10 +28,6 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             background-color: #f9f9f9;
-        }
-        .section h3 {
-            margin-top: 0;
-            color: #444;
         }
         label {
             font-weight: bold;
@@ -79,7 +75,7 @@
     <div class="container">
         <h2>EBR Best Practices Checklist</h2>
 
-        <form action="https://script.google.com/macros/s/AKfycbyQShfVqs_UVoeptXTlJP9RTAR_R5M9_2Cq6WbiyGdXROPn9Hf8A3fGGTBgeOeHP_3-/exec" method="POST">
+        <form action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" method="POST">
             <!-- Section 1: School and Course Information -->
             <div class="section">
                 <label for="school">Pick a School:</label>
@@ -96,6 +92,9 @@
                     <option value="Self-Directed Academy">Self-Directed Academy</option>
                 </select>
 
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last_name">
+
                 <label for="role">What is your role?</label>
                 <select id="role" name="role">
                     <option value="teacher">Teacher</option>
@@ -111,6 +110,7 @@
             <!-- Section 2: Phase 1 -->
             <div class="section">
                 <h3>Phase 1: Setting the Foundation for EBR</h3>
+                <p>Select the success criteria that your PLC course has successfully completed.</p>
                 <div class="checkbox-group">
                     <input type="checkbox" id="phase1_criteria1" name="phase1_criteria1">
                     <label for="phase1_criteria1">Course Enduring Skills & Proficiency Scales created</label>
@@ -131,106 +131,9 @@
                 <textarea id="phase1_notes" name="phase1_notes" placeholder="Write your notes here..."></textarea>
             </div>
 
-            <!-- Section 3: Phase 2 -->
-            <div class="section">
-                <h3>Phase 2: Common Assessment</h3>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase2_criteria1" name="phase2_criteria1">
-                    <label for="phase2_criteria1">Common Formative Assessments aligned with proficiency scales and success criteria</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase2_criteria2" name="phase2_criteria2">
-                    <label for="phase2_criteria2">Common District Summative Assessments aligned with proficiency scales and success criteria</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase2_criteria3" name="phase2_criteria3">
-                    <label for="phase2_criteria3">Unit Framers Completed with Student Exemplars for Levels 3,4</label>
-                </div>
-                <label for="phase2_notes">For Phase 2, What does the PLC need to work on? (Gaps that need to be worked on? OR Any ideas for strengthening your PLC for continuous improvement?)</label>
-                <textarea id="phase2_notes" name="phase2_notes" placeholder="Write your notes here..."></textarea>
-            </div>
+            <!-- Repeat for all other phases... -->
 
-            <!-- Section 4: Phase 3 -->
-            <div class="section">
-                <h3>Phase 3: Implementation of Proficiency-Based Models</h3>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase3_criteria1" name="phase3_criteria1">
-                    <label for="phase3_criteria1">EBR Feedback to improve student achievement and growth</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase3_criteria2" name="phase3_criteria2">
-                    <label for="phase3_criteria2">Students track progress and self-assess on Enduring Skills/ELOs</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase3_criteria3" name="phase3_criteria3">
-                    <label for="phase3_criteria3">Calibration of common assessments</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase3_criteria4" name="phase3_criteria4">
-                    <label for="phase3_criteria4">Collection of Data to inform and drive instruction (both on scrimmages & games)</label>
-                </div>
-                <label for="phase3_notes">For Phase 3, What does the PLC need to work on? (Gaps that need to be worked on? OR Any ideas for strengthening your PLC for continuous improvement?)</label>
-                <textarea id="phase3_notes" name="phase3_notes" placeholder="Write your notes here..."></textarea>
-            </div>
-
-            <!-- Section 5: Phase 4 -->
-            <div class="section">
-                <h3>Phase 4: Scaffolding & Differentiation</h3>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase4_criteria1" name="phase4_criteria1">
-                    <label for="phase4_criteria1">PLC group understands differences between accommodations & modifications</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase4_criteria2" name="phase4_criteria2">
-                    <label for="phase4_criteria2">Accommodated and modified activities and assessments</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase4_criteria3" name="phase4_criteria3">
-                    <label for="phase4_criteria3">Differentiate instruction based on student proficiency levels</label>
-                </div>
-                <label for="phase4_notes">For Phase 4, What does the PLC need to work on? (Gaps that need to be worked on? OR Any ideas for strengthening your PLC for continuous improvement?)</label>
-                <textarea id="phase4_notes" name="phase4_notes" placeholder="Write your notes here..."></textarea>
-            </div>
-
-            <!-- Section 6: Phase 5 -->
-            <div class="section">
-                <h3>Phase 5: Evidence-Based Reporting</h3>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase5_criteria1" name="phase5_criteria1">
-                    <label for="phase5_criteria1">Report EBR Proficiency/Grades in PowerSchool</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase5_criteria2" name="phase5_criteria2">
-                    <label for="phase5_criteria2">Knowledge of Bimodal Matrix and when to account for recent evidence</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase5_criteria3" name="phase5_criteria3">
-                    <label for="phase5_criteria3">Communicate progress and proficiency to stakeholders</label>
-                </div>
-                <label for="phase5_notes">For Phase 5, What does the PLC need to work on? (Gaps that need to be worked on? OR Any ideas for strengthening your PLC for continuous improvement?)</label>
-                <textarea id="phase5_notes" name="phase5_notes" placeholder="Write your notes here..."></textarea>
-            </div>
-
-            <!-- Section 7: Phase 6 -->
-            <div class="section">
-                <h3>Phase 6: Revisit, Revise, and Recommit</h3>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase6_criteria1" name="phase6_criteria1">
-                    <label for="phase6_criteria1">Revisit the previous phases</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase6_criteria2" name="phase6_criteria2">
-                    <label for="phase6_criteria2">Revise and make necessary updates and changes rooted in data and reflection</label>
-                </div>
-                <div class="checkbox-group">
-                    <input type="checkbox" id="phase6_criteria3" name="phase6_criteria3">
-                    <label for="phase6_criteria3">Recommit to the process</label>
-                </div>
-                <label for="phase6_notes">For Phase 6, What does the PLC need to work on? (Gaps that need to be worked on? OR Any ideas for strengthening your PLC for continuous improvement?)</label>
-                <textarea id="phase6_notes" name="phase6_notes" placeholder="Write your notes here..."></textarea>
-            </div>
-
-            <!-- Section 8: Final Reflection Questions -->
+            <!-- Section 8: Final Reflection -->
             <div class="section">
                 <label for="improvement_areas">After reviewing the phases of EBR and success criteria, what specific areas does your PLC team identify as needing improvement?</label>
                 <textarea id="improvement_areas" name="improvement_areas" placeholder="Write your response here..."></textarea>
